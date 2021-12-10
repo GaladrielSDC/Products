@@ -1,5 +1,5 @@
 const {Pool} = require('pg');
-require('dotenv').config();
+require('dotenv').config();//env variables
 ;
 const password = process.env.PASSWORD;
 const host = process.env.HOST;

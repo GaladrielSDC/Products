@@ -1,8 +1,9 @@
 const express = require ('express');
-const {pool} = require('./db')
+const pool = require('./db')
 const url = require ('url');
-//added for branch n//
-const PORT = 3000;
+require('dotenv').config();
+
+const PORT = 3010;
 const app = express();
 app.use(express.json());
 
@@ -24,7 +25,7 @@ app.get('/products', (req, res) => {
   if(req.query.count) {
     count = parseInt(req.query.count)
   }
-offsetNum = (page - 1) * count
+offsetNum = (page - 1) * count;
   pool.query(`select * from product limit ${count} offset ${offsetNum}`, (err, results) => {
     if (err) {
       throw err
@@ -57,6 +58,7 @@ app.get('/products/:product_id/styles', (req, res) => {
 })
  app.get('/products/:product_id/related', (req, res) => {
    const productId = req.params.product_id;
+   console.log(pool)
   pool.query(`select related_product_id from related where product_id  = ${productId}`)
   .then(result => {
     relatedProductIds = []

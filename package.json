@@ -1,0 +1,25 @@
+{
+  "name": "products",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon Server/index.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaladrielSDC/Products.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaladrielSDC/Products/issues"
+  },
+  "homepage": "https://github.com/GaladrielSDC/Products#readme"
+}

@@ -131,3 +131,4 @@ pool.query(stylesQuery, [req.params.product_id], (err,results) => {
     throw err;
   })
 })
+
